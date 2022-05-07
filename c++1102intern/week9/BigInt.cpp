@@ -110,7 +110,6 @@ void bigint::add(const char * const s){
     for(n = 0; s[n]; n++) num[n] = s[sz - n - 1] - 48;
     ans(digit, numdigit, cap, num, n);
 }
-
 void bigint::printvalue(){
     while(digit[numdigit - 1] == 0) numdigit--;
     if(!numdigit) cout << 0;

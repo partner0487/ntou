@@ -10,7 +10,7 @@ time: 2022 / 05 / 07
 #include "string"
 using namespace std;
 
-void ans(int digit[], int &numdigit, int num[], int &n){
+void ans(int digit[], int &numdigit, int cap, int num[], int &n){
     int ans[100];
     memset(ans, 0, sizeof(ans));
     int carry = 0, i = 0;
@@ -29,6 +29,10 @@ void ans(int digit[], int &numdigit, int num[], int &n){
         ++i;
     }
     if(carry) ans[i++] += 1;
+    if(i > cap){
+        cout << "Over Flow!" << endl;
+        return;
+    }
     numdigit = i;
     for(int j = 0; j < i; j++) digit[j] = ans[j];
 }
@@ -44,16 +48,18 @@ bigint::bigint(){
     zero();
 }
 bigint::bigint(int v, int size = 100){
-    digit = 0; cap = numdigit = 0;
+    digit = (int *)malloc(size * sizeof(int));
+    cap = size, numdigit = 0;
 
     int temp = v, sz = 0;
     while(temp){
         temp /= 10;
         sz++;
     }
-    if(sz > size) return;
-    cap = size;
-    digit = (int *) malloc(cap * sizeof(int));
+    if(sz > size){
+        cout << "Over Flow!" << endl;
+        return;
+    }
     zero();
     numdigit = sz; int n = 0;
     while(v){
@@ -62,14 +68,15 @@ bigint::bigint(int v, int size = 100){
     }
 }
 bigint::bigint(const char * const s, const int size = 100){
-    digit = 0;
-    cap = numdigit = 0;
+    digit = (int *) malloc(size * sizeof(int));
+    cap = size, numdigit = 0;
     
     int sz = strlen(s);
-    if(sz > size) return;
+    if(sz > size){
+        cout << "Over Flow!" << endl;
+        return;
+    }
 
-    cap = size;
-    digit = (int *) malloc(cap * sizeof(int));
     zero();
     numdigit = sz;
     for(int i = 0, k = sz - 1; i < sz; i++, k--){
@@ -88,7 +95,7 @@ void bigint::zero(){
     numdigit = 0;
 }
 void bigint::add(bigint &x){
-    ans(digit, numdigit, x.digit, x.numdigit);
+    ans(digit, numdigit, cap, x.digit, x.numdigit);
 }
 void bigint::add(int v){
     int num[100], n = 0;
@@ -96,15 +103,16 @@ void bigint::add(int v){
         num[n] = v % 10;
         v /= 10; n++;
     }
-    ans(digit, numdigit, num, n);
+    ans(digit, numdigit, cap, num, n);
 }
 void bigint::add(const char * const s){
     int num[100], n, sz = strlen(s);
     for(n = 0; s[n]; n++) num[n] = s[sz - n - 1] - 48;
-    ans(digit, numdigit, num, n);
+    ans(digit, numdigit, cap, num, n);
 }
 
 void bigint::printvalue(){
+    while(digit[numdigit - 1] == 0) numdigit--;
     if(!numdigit) cout << 0;
     else
         for(int i = numdigit - 1; i >= 0; i--) cout << digit[i];
@@ -113,18 +121,20 @@ void bigint::printvalue(){
 }
 
 int main(){
-    bigint x("99900");
-    x.add("100");
-    x.printvalue();
-    bigint y("99900");
-    y.add(100);
+    bigint x, y("1234"), z("000009876054321");
+	x.printvalue();
+	y.printvalue();
+	z.printvalue();
+    y.add(z);
     y.printvalue();
-    bigint z(99900);
-    z.printvalue();
-    //*
-    bigint w(x);
-    w.printvalue();
-    w.add(x);
-    w.printvalue();
-    return 0;//*/
+	bigint i(444, 2);
+	i.printvalue();
+	bigint j(i);
+	j.printvalue();
+	i.add(78);
+	i.printvalue();
+	i.add("98765");
+	i.printvalue();
+	i.add(j);
+	i.printvalue();
 }

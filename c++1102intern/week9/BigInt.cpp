@@ -77,12 +77,19 @@ bigint::bigint(const char * const s, const int size = 100){
         digit[k] = s[i] - 48;
     }
 }
+bigint::bigint(const bigint &x){
+    cap = x.cap; numdigit = x.numdigit;
+    digit = (int *)malloc(cap * sizeof(digit));
+    for(int i = 0; i < cap; i++) digit[i] = x.digit[i];
+}
 
 void bigint::zero(){
     memset(digit, 0, sizeof(digit));
     numdigit = 0;
 }
-
+void bigint::add(bigint &x){
+    ans(digit, numdigit, x.digit, x.numdigit);
+}
 void bigint::add(int v){
     int num[100], n = 0;
     while(v){
@@ -102,6 +109,7 @@ void bigint::printvalue(){
     else
         for(int i = numdigit - 1; i >= 0; i--) cout << digit[i];
     cout << endl;
+    return;
 }
 
 int main(){
@@ -113,4 +121,10 @@ int main(){
     y.printvalue();
     bigint z(99900);
     z.printvalue();
+    //*
+    bigint w(x);
+    w.printvalue();
+    w.add(x);
+    w.printvalue();
+    return 0;//*/
 }

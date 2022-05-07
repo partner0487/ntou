@@ -1,20 +1,24 @@
+/*
+Author: Xiaoyo
+num: 01057020
+time: 2022 / 05 / 07
+//*/
 #ifndef bigint_h
 #define bigint_h
 #include "string"
 
 class bigint{
-    private:
+    public:
         int *digit;
         int cap, numdigit;
-    public:
         ~bigint();
         bigint();
         bigint(const int value, const int size);
         bigint(const char * const, const int size);
         bigint(const bigint &);
         void zero();
-        void add(const bigint &);
-        void add(const int);
+        void add(bigint &);
+        void add(int);
         void add(const char * const);
         void printvalue();
 };

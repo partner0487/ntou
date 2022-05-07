@@ -67,7 +67,7 @@ bigint::bigint(int v, int size = 100){
         v /= 10; n++;
     }
 }
-bigint::bigint(const char * const s, const int size = 100){
+bigint::bigint(const char * const s, int size = 100){
     digit = (int *) malloc(size * sizeof(int));
     cap = size, numdigit = 0;
     
@@ -84,7 +84,7 @@ bigint::bigint(const char * const s, const int size = 100){
         digit[k] = s[i] - 48;
     }
 }
-bigint::bigint(const bigint &x){
+bigint::bigint(bigint &x){
     cap = x.cap; numdigit = x.numdigit;
     digit = (int *)malloc(cap * sizeof(digit));
     for(int i = 0; i < cap; i++) digit[i] = x.digit[i];

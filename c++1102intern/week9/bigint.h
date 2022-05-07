@@ -13,9 +13,9 @@ class bigint{
         int cap, numdigit;
         ~bigint();
         bigint();
-        bigint(const int value, const int size);
-        bigint(const char * const, const int size);
-        bigint(const bigint &);
+        bigint(int value, int size);
+        bigint(const char * const, int size);
+        bigint(bigint &);
         void zero();
         void add(bigint &);
         void add(int);

@@ -4,6 +4,7 @@ num: 01057020
 time: 2022 / 05 / 14
 //*/
 #include "iostream"
+#include "time.h"
 #include "string.h"
 using namespace std;
 
@@ -11,45 +12,53 @@ struct book{
     const char *bookName, *authors;
     int price;
 };
+
+template<class type>
 struct node{
-    node *l, *r;
-    book content;
+    node<type> *l,  *r;
+    type d;
 };
 
-void printFun(book a){
-    cout << a.bookName << " " << a.authors << " " << a.price << endl;
+void printFun(book x){
+    cout << x.bookName << " " << x.authors << " " << x.price << endl;
+}
+int cmp(book a, book b){
+    int res = strcmp(a.bookName, b.bookName);
+    return res;
 }
 
-void insert(node *&now, book it){
+template<class type>
+void insert(node<type> *&now, type v){
     if(now == NULL){
-        now = new node();
-        now->content = it;
+        now = new node<type>();
+        now->d = v;
         return;
     }
-    int res = strcmp(it.bookName, now->content.bookName);
-    if(res > 0) insert(now->r, it);
-    else        insert(now->l, it);
+    if(cmp(v, now->d) > 0) insert(now->r, v);
+    else                   insert(now->l, v);
 }
-
-void preorder(node *now){
+template<class type>
+void inorder(node<type> *now){
     if(now != NULL){
-        printFun(now->content);
+        inorder(now->l);
+        printFun(now->d);
+        inorder(now->r);
+    }
+}
+template<class type>
+void preorder(node<type> *now){
+    if(now != NULL){
+        printFun(now->d);
         preorder(now->l);
         preorder(now->r);
     }
 }
-void inorder(node *now){
-    if(now != NULL){
-        inorder(now->l);
-        printFun(now->content);
-        inorder(now->r);
-    }
-}
-void postorder(node *now){
+template<class type>
+void postorder(node<type> *now){
     if(now != NULL){
         postorder(now->l);
         postorder(now->r);
-        printFun(now->content);
+        printFun(now->d);
     }
 }
 
@@ -59,19 +68,8 @@ void setBook(book &it, const char* bookName, const char *authors, int price){
     it.price = price;
 }
 
-void traversal(node *now){
-    cout << "Preorder: " << endl;
-    preorder(now);
-    cout << endl;
-    cout << "Inorder: " << endl;
-    inorder(now);
-    cout << endl;
-    cout << "Postorder: " << endl;
-    postorder(now);
-}
-
 void testBook(){
-    node *root = NULL;
+    node<book> *root = NULL;
 	book item;
 	
     cout << "The books begin placed in the tree are: " << endl;
@@ -137,7 +135,15 @@ void testBook(){
 	insert(root, item);
 
     cout << endl;
-    traversal(root);
+    cout << "Preorder: " << endl;
+    preorder(root);
+    cout << endl;
+    cout << "Inorder: " << endl;
+    inorder(root);
+    cout << endl;
+    cout << "Postorder: " << endl;
+    postorder(root);
+    cout << endl;
 }
 
 int main(){

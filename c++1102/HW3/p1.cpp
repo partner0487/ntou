@@ -31,9 +31,25 @@ void inorder(node<type> *now){
         inorder(now->r);
     }
 }
+template<class type>
+void preorder(node<type> *now){
+    if(now != NULL){
+        cout << now->d << " ";
+        preorder(now->l);
+        preorder(now->r);
+    }
+}
+template<class type>
+void postorder(node<type> *now){
+    if(now != NULL){
+        postorder(now->l);
+        postorder(now->r);
+        cout << now->d << " ";
+    }
+}
 
-void testp1(){
-    node<int> *root = new node<int>();
+void testp1int(){
+    node<int> *root = NULL;
     for(int i = 1, it; i <= 15; i++){
         it = rand() % 15;
         cout << it << " ";
@@ -41,9 +57,31 @@ void testp1(){
     }
     cout << endl;
     inorder(root);
+    cout << endl;
+    preorder(root);
+    cout << endl;
+    postorder(root);
+}
+
+void testp1float(){
+    node<float> *root = NULL;
+    float it;
+    for(int i = 1; i <= 15; i++){
+        it = 1.0 + (float)(rand() % 8) * 0.01f;
+        cout << it << " ";
+        insert(root, it);
+    }
+    cout << endl;
+    inorder(root);
+    cout << endl;
+    preorder(root);
+    cout << endl;
+    postorder(root);
 }
 
 int main(){
-    testp1();
-    
+    testp1int();
+    cout << endl;
+    testp1float();
+    cout << endl;
 }

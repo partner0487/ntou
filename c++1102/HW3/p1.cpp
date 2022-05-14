@@ -65,7 +65,7 @@ void postorder(node<type> *now){
     }
 }
 
-void testp1int(){
+void testInt(){
     node<int> *root = NULL;
     for(int i = 1, it; i <= 15; i++){
         it = rand() % 15;
@@ -80,7 +80,7 @@ void testp1int(){
     postorder(root);
 }
 
-void testp1float(){
+void testFloat(){
     node<float> *root = NULL;
     float it;
     for(int i = 1; i <= 15; i++){
@@ -97,8 +97,8 @@ void testp1float(){
 }
 
 int main(){
-    testp1int();
+    testInt();
     cout << endl;
-    testp1float();
+    testFloat();
     cout << endl;
 }

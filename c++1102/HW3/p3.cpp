@@ -86,7 +86,7 @@ bool deleteINTnode(node<T> *&now, K key){
     return 1;
 }
 
-void testp1int(){
+void testInt(){
     node<int> *root = NULL;
     for(int i = 1, it; i <= 15; i++){
         it = rand() % 15;
@@ -111,6 +111,6 @@ void testp1int(){
 }
 
 int main(){
-    testp1int();
+    testInt();
     cout << endl;
 }

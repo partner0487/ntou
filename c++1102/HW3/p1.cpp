@@ -7,6 +7,21 @@ time: 2022 / 05 / 14
 #include "time.h"
 using namespace std;
 
+void printFun(int x){
+    cout << x << " ";
+}
+void printFun(float x){
+    cout << x << " ";
+}
+bool cmp(int a, int b){
+    if(a > b) return 1;
+    else      return 0;
+}
+bool cmp(float a, float b){
+    if(a > b) return 1;
+    else      return 0;
+}
+
 template<class type>
 struct node{
     node<type> *l,  *r;
@@ -20,21 +35,21 @@ void insert(node<type> *&now, type v){
         now->d = v;
         return;
     }
-    if(v > now->d) insert(now->r, v);
+    if(cmp(v, now->d)) insert(now->r, v);
     else           insert(now->l, v);
 }
 template<class type>
 void inorder(node<type> *now){
     if(now != NULL){
         inorder(now->l);
-        cout << now->d << " ";
+        printFun(now->d);
         inorder(now->r);
     }
 }
 template<class type>
 void preorder(node<type> *now){
     if(now != NULL){
-        cout << now->d << " ";
+        printFun(now->d);
         preorder(now->l);
         preorder(now->r);
     }
@@ -44,7 +59,7 @@ void postorder(node<type> *now){
     if(now != NULL){
         postorder(now->l);
         postorder(now->r);
-        cout << now->d << " ";
+        printFun(now->d);
     }
 }
 
@@ -56,9 +71,9 @@ void testp1int(){
         insert(root, it);
     }
     cout << endl;
-    inorder(root);
-    cout << endl;
     preorder(root);
+    cout << endl;
+    inorder(root);
     cout << endl;
     postorder(root);
 }
@@ -72,9 +87,9 @@ void testp1float(){
         insert(root, it);
     }
     cout << endl;
-    inorder(root);
-    cout << endl;
     preorder(root);
+    cout << endl;
+    inorder(root);
     cout << endl;
     postorder(root);
 }

@@ -59,17 +59,17 @@ void postorder(node<type> *now){
 }
 
 template<class type>
-int dfs(node<type> *&now, int t){
+type dfs(node<type> *&now, int t){
     if(t){
         if(now->l == NULL){
-            int ret = now->d;
+            type ret = now->d;
             now = now->r;
             return ret;
         }
     }
     else{
         if(now->r == NULL){
-            int ret = now->d;
+            type ret = now->d;
             now = now->l;
             return ret;
         }

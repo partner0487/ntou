@@ -4,13 +4,113 @@ num: 01057020
 time: 2022 / 05 / 14
 //*/
 #include "iostream"
+#include "time.h"
 using namespace std;
 
+void printFun(int x){
+    cout << x << " ";
+}
+
+int cmp(int a, int b){
+    if(a > b) return 1;
+    else if(a < b) return -1;
+    else return 0;
+}
+
+template<class type>
 struct node{
-    node *l, *r;
-    int d;
+    node<type> *l,  *r;
+    type d;
 };
 
-int main(){
+template<class type>
+void insert(node<type> *&now, type v){
+    if(now == NULL){
+        now = new node<type>();
+        now->d = v;
+        return;
+    }
+    if(cmp(v, now->d) > 0) insert(now->r, v);
+    else               insert(now->l, v);
+}
+template<class type>
+void inorder(node<type> *now){
+    if(now != NULL){
+        inorder(now->l);
+        printFun(now->d);
+        inorder(now->r);
+    }
+}
+template<class type>
+void preorder(node<type> *now){
+    if(now != NULL){
+        printFun(now->d);
+        preorder(now->l);
+        preorder(now->r);
+    }
+}
+template<class type>
+void postorder(node<type> *now){
+    if(now != NULL){
+        postorder(now->l);
+        postorder(now->r);
+        printFun(now->d);
+    }
+}
 
+template<class type>
+int dfs(node<type> *&now, int t){
+    if(t){
+        if(now->l == NULL){
+            int ret = now->d;
+            now = now->r;
+            return ret;
+        }
+    }
+    else{
+        if(now->r == NULL){
+            int ret = now->d;
+            now = now->l;
+            return ret;
+        }
+    }
+    return t ? dfs(now->l, t) : dfs(now->r, t);
+}
+
+template<class T, class K>
+bool deleteINTnode(node<T> *&now, K key){
+    if(now == NULL) return 0;
+    if(cmp(key, now->d) > 0) deleteINTnode(now->r, key);
+    else if(cmp(key, now->d) < 0) deleteINTnode(now->l, key);
+    else now->d = now->r == NULL ? dfs(now->l, 0) : dfs(now->r, 1);
+    return 1;
+}
+
+void testp1int(){
+    node<int> *root = NULL;
+    for(int i = 1, it; i <= 15; i++){
+        it = rand() % 15;
+        cout << it << " ";
+        insert(root, it);
+    }
+    cout << endl;
+    preorder(root);
+    cout << endl;
+    inorder(root);
+    cout << endl;
+    postorder(root);
+    cout << endl;
+
+    cout << "testDelete: " << endl;
+    cout << (deleteINTnode(root, 11) ? "success" : "fail") << endl;
+    preorder(root);
+    cout << endl;
+    inorder(root);
+    cout << endl;
+    postorder(root);
+}
+
+int main(){
+    testp1int();
+    cout << endl;
 }

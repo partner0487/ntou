@@ -13,13 +13,15 @@ void printFun(int x){
 void printFun(float x){
     cout << x << " ";
 }
-bool cmp(int a, int b){
+int cmp(int a, int b){
     if(a > b) return 1;
-    else      return 0;
+    else if(a < b) return -1;
+    else return 0;
 }
-bool cmp(float a, float b){
+int cmp(float a, float b){
     if(a > b) return 1;
-    else      return 0;
+    else if(a < b) return -1;
+    else return 0;
 }
 
 template<class type>
@@ -35,8 +37,8 @@ void insert(node<type> *&now, type v){
         now->d = v;
         return;
     }
-    if(cmp(v, now->d)) insert(now->r, v);
-    else               insert(now->l, v);
+    if(cmp(v, now->d) > 0) insert(now->r, v);
+    else                   insert(now->l, v);
 }
 template<class type>
 void inorder(node<type> *now){

@@ -78,10 +78,10 @@ type dfs(node<type> *&now, int t){
 }
 
 template<class T, class K>
-bool deleteINTnode(node<T> *&now, K key){
+bool deletenode(node<T> *&now, K key){
     if(now == NULL) return 0;
-    if(cmp(key, now->d) > 0) deleteINTnode(now->r, key);
-    else if(cmp(key, now->d) < 0) deleteINTnode(now->l, key);
+    if(cmp(key, now->d) > 0) deletenode(now->r, key);
+    else if(cmp(key, now->d) < 0) deletenode(now->l, key);
     else now->d = now->r == NULL ? dfs(now->l, 0) : dfs(now->r, 1);
     return 1;
 }
@@ -102,7 +102,7 @@ void testInt(){
     cout << endl;
 
     cout << "testDelete: " << endl;
-    cout << (deleteINTnode(root, 11) ? "success" : "fail") << endl;
+    cout << (deletenode(root, 11) ? "success" : "fail") << endl;
     preorder(root);
     cout << endl;
     inorder(root);

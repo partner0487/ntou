@@ -36,7 +36,7 @@ void insert(node<type> *&now, type v){
         return;
     }
     if(cmp(v, now->d)) insert(now->r, v);
-    else           insert(now->l, v);
+    else               insert(now->l, v);
 }
 template<class type>
 void inorder(node<type> *now){

@@ -143,7 +143,6 @@ void testBook(){
     cout << endl;
     cout << "Postorder: " << endl;
     postorder(root);
-    cout << endl;
 }
 
 int main(){

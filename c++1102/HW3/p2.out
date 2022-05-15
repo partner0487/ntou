@@ -1,0 +1,67 @@
+The books begin placed in the tree are: 
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+程式設計-使用C++ 黃建庭 420
+資料庫系統:MTA認證影音教學 李春雄 336
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+人工智慧：智慧型系統導論(第三版)  李聯旺 廖珗洲 謝政勳 590
+電腦網路概論(第二版) 陳雲龍 420
+網際網路與電子商務(第三版) 朱正忠 450
+資料庫系統理論-使用SQL Server 2008 李春雄 650
+動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+程式設計-使用C++ 黃建庭 420
+資料庫系統-MTA認證影音教學 李春雄 336
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+
+Preorder: 
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+程式設計-使用C++ 黃建庭 420
+人工智慧：智慧型系統導論(第三版)  李聯旺 廖珗洲 謝政勳 590
+動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+程式設計-使用C++ 黃建庭 420
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+資料庫系統:MTA認證影音教學 李春雄 336
+網際網路與電子商務(第三版) 朱正忠 450
+資料庫系統-MTA認證影音教學 李春雄 336
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+資料庫系統理論-使用SQL Server 2008 李春雄 650
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+電腦網路概論(第二版) 陳雲龍 420
+
+Inorder: 
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+人工智慧：智慧型系統導論(第三版)  李聯旺 廖珗洲 謝政勳 590
+動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+程式設計-使用C++ 黃建庭 420
+程式設計-使用C++ 黃建庭 420
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+網際網路與電子商務(第三版) 朱正忠 450
+資料庫系統-MTA認證影音教學 李春雄 336
+資料庫系統:MTA認證影音教學 李春雄 336
+資料庫系統理論-使用SQL Server 2008 李春雄 650
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+電腦網路概論(第二版) 陳雲龍 420
+
+Postorder: 
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+程式設計-使用C++ 黃建庭 420
+動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+人工智慧：智慧型系統導論(第三版)  李聯旺 廖珗洲 謝政勳 590
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+程式設計-使用C++ 黃建庭 420
+VISUAL FORTRAN程式設計與開發 張嘉強、陳鴻智 400
+資料庫系統-MTA認證影音教學 李春雄 336
+網際網路與電子商務(第三版) 朱正忠 450
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+資料庫系統理論-使用SQL Server 2008 李春雄 650
+電腦網路概論(第二版) 陳雲龍 420
+輕鬆搞定Google雲端技術:Maps.Android.App Engine.Cloud SQL與電子商務API實例解析 陳世興 560
+資料庫系統:MTA認證影音教學 李春雄 336
+精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371

@@ -63,7 +63,6 @@ Int Int::operator+(Int x){
 }
 
 int main(){
-<<<<<<< HEAD
     Int x;
     for(int i = 0, idx = 4; i < 5; i++, idx--){
         x.n[idx] = i + 49;
@@ -82,8 +81,3 @@ int main(){
 12345
 56789
 //*/
-=======
-    const char *s = "hello world";
-    cout << s[1] << endl;
-}
->>>>>>> 275e6594d1432ab3ef1040e841f748e1d572550b

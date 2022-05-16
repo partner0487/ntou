@@ -78,6 +78,40 @@ int main(){
     x.print();
 }
 /*
-12345
-56789
+int l1 = strlen(s1), l2 = strlen(s2), i, j, k = 0, t = 0, borrow = 0;
+if (l1 == l2) {
+    for (i = l1 - 1; i >= 0; i--) {
+        if (s1[i] < s2[i]) {
+	        for (j = l1 - 1; j >= 0; j--) {
+                swap(s1[i], s2[i]);
+	        }
+            swap(l1, l2);
+	        break;
+        }
+    }
+}
+for (i = 0, n1 = l1 - 1; s1[n1]; n1--, i++)
+    num1[n1] = s1[i] - 48;
+for (i = 0, n2 = l2 - 1; s2[n2]; n2--, i++)
+	num2[n2] = s2[i] - 48;
+i = l1 - 1, j = l2 - 1, k = l1 - 1;
+while (i >= 0 && j >= 0) {
+	while(i > j) ans[k--] = num1[i--];
+	ans[k] = (num1[i]) - (num2[j]) + borrow;
+	if (ans[k] < 0) {
+		ans[k] += 10;
+		borrow = 1;
+	}
+	else {
+		borrow = 0;
+		k--, i--, j--;
+	}
+}
+for (i = l1 - 1; i >= 0; i--) printf("%d", ans[i]);
+//*/
+/*
+a + b
+-(a + b)
+-a + b;
+a - b;
 //*/

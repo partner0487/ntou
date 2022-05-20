@@ -31,7 +31,7 @@ void insert(node<type> *&now, type v){
         return;
     }
     if(cmp(v, now->d) > 0) insert(now->r, v);
-    else               insert(now->l, v);
+    else                   insert(now->l, v);
 }
 template<class type>
 void inorder(node<type> *now){
@@ -59,7 +59,7 @@ void postorder(node<type> *now){
 }
 
 template<class type>
-type dfs(node<type> *&now, int t){
+type find(node<type> *&now, int t){
     if(t){
         if(now->l == NULL){
             type ret = now->d;
@@ -74,7 +74,7 @@ type dfs(node<type> *&now, int t){
             return ret;
         }
     }
-    return t ? dfs(now->l, t) : dfs(now->r, t);
+    return t ? find(now->l, t) : find(now->r, t);
 }
 
 template<class T, class K>
@@ -82,7 +82,7 @@ bool deletenode(node<T> *&now, K key){
     if(now == NULL) return 0;
     if(cmp(key, now->d) > 0) deletenode(now->r, key);
     else if(cmp(key, now->d) < 0) deletenode(now->l, key);
-    else now->d = now->r == NULL ? dfs(now->l, 0) : dfs(now->r, 1);
+    else now->d = now->r == NULL ? find(now->l, 0) : find(now->r, 1);
     return 1;
 }
 

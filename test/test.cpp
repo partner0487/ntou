@@ -63,6 +63,7 @@ Int Int::operator+(Int x){
 }
 
 int main(){
+    /*
     Int x;
     for(int i = 0, idx = 4; i < 5; i++, idx--){
         x.n[idx] = i + 49;
@@ -75,7 +76,9 @@ int main(){
     }
     y.cap = 5, y.num = 5, y.sign = 1;
     x = x + y;
-    x.print();
+    x.print();//*/
+    const char *s = "12345";
+    cout << s[0] << endl;
 }
 /*
 int l1 = strlen(s1), l2 = strlen(s2), i, j, k = 0, t = 0, borrow = 0;

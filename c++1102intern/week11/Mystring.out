@@ -1,0 +1,48 @@
+testMystring: 
+str1 is: String
+str2 is: Test String 2
+str3 is: String
+The number of MyString instances is: 3
+
+Test input: Give one word 
+str1 is: hello
+
+Test +: 
+destruct: Test String 2
+str1 + str2 is: helloTest String 2
+
+Test =: 
+destruct: hello
+destruct: hello
+str2 is: hello
+
+Test +=: 
+destruct: Stringhello
+destruct: hello
+str3 is: Stringhello
+
+Test [] 1: 
+str3 is: Stringhello
+
+Test [] 2: 
+str3 is: abcdefghijk
+
+Compare: 
+str1 is: hello
+str2 is: hello
+str3 is: abcdefghijk
+Compare str1 == str2 is: 1
+Compare str1 == str3 is: 0
+Compare str1 != str2 is: 0
+Compare str1 != str3 is: 1
+destruct: helloTest String 2
+destruct: abcdefghijk
+destruct: hello
+destruct: hello
+
+testMystring_Derived: 
+NTOU
+0x75679ffa10 NTOU
+0x75679ffa10 NTOU
+destruct: NTOU
+destruct: NTOU

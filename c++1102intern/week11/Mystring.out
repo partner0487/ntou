@@ -8,8 +8,10 @@ Test input: Give one word
 str1 is: hello
 
 Test +: 
-destruct: Test String 2
-str1 + str2 is: helloTest String 2
+str1 + str2 is: destruct: helloTest String 2
+destruct: helloTest String 2
+destruct: helloTest String 2
+helloTest String 2
 
 Test =: 
 destruct: hello
@@ -35,14 +37,13 @@ Compare str1 == str2 is: 1
 Compare str1 == str3 is: 0
 Compare str1 != str2 is: 0
 Compare str1 != str3 is: 1
-destruct: helloTest String 2
 destruct: abcdefghijk
 destruct: hello
 destruct: hello
 
 testMystring_Derived: 
 NTOU
-0x75679ffa10 NTOU
-0x75679ffa10 NTOU
+0x753b7ffc80 NTOU
+0x753b7ffc80 NTOU
 destruct: NTOU
-destruct: NTOU
+destruct: helloTest String 2

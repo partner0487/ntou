@@ -34,15 +34,18 @@ int main() {
 	output(deck);
 	printf("\n");
 
+
 	bubble(deck, 52, sort2);
 	output(deck);
 	printf("\n");
 
-	bubble(deck, 13, sort1);
+	for(int i = 0; i < 52; i++)
+		bubble(deck, i + 13, sort1);
 	output(deck);
 	printf("\n");
 
-	bubble(deck, 13, sort2);
+	for(int i = 0; i < 52; i += 13)
+		bubble(deck, i + 13, sort2);
 	output(deck);
 	printf("\n");
 }

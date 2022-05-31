@@ -48,4 +48,5 @@ int main() {
 		bubble(deck, i + 13, sort2);
 	output(deck);
 	printf("\n");
+	//
 }

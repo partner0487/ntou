@@ -81,7 +81,7 @@ int adapter_class::remove(book a){
     adaptee::remove(a, ret);
     return ret;
 }
-book *get(string BN){
+book *adapter_class::get(string BN){
     book *p;
     adaptee::get(BN, p);
     return p;

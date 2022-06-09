@@ -1,0 +1,67 @@
+Is empty
+Not full
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+15
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
+Not empty
+Not full
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+Is empty
+Not full
+
+Is empty
+Not full
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+push succeed
+10.1
+1.01 2.02 3.03 4.04 5.05 6.06 7.07 8.08 9.09 10.1 
+Not empty
+Not full
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+pop succeed
+Is empty
+Not full

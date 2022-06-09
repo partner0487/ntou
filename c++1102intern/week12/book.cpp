@@ -52,7 +52,7 @@ void adaptee::remove(book v, int &result){
         result = 1;
     }
 }
-void *adaptee::get(string BN, book *&p){
+void adaptee::get(string BN, book *&p){
     if(MB.find(BN) == MB.end()) p = nullptr;
     else p = &MB[BN];
 }

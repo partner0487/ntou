@@ -180,13 +180,7 @@ bigint divide(char digit[], int &numdigit, int &cap, int &sign1, char num[], int
 	//*
 	bigint d(num, n, cap, sign2);
 	bigint c = (nd * d);
-	/*
-	if(check(c.digit, c.numdigit, digit, numdigit)){
-		mk[numdigit - n - 1] = '1';
-		nd = bigint(mk, numdigit - n, numdigit, 1);
-		nowd--;
-		for(int i = 0; i < nowd; i++) now[i] = now[i + 1];
-	}//*/
+	
 	for(int i = 0; i < c.numdigit; i++) now[i] = c.digit[i];
 	nowd = c.numdigit;
 

@@ -1,0 +1,300 @@
+test adapter_class_1
+Test LookupTable
+Test add
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+Test remove
+成功 精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+成功 電腦網路概論(第二版) 陳雲龍 420
+成功 動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+失敗
+Test find
+失敗
+失敗
+失敗
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格 : 486.571
+Test clean
+失敗
+失敗
+失敗
+壓力測試
+Test add
+Test find
+Test find
+Test remove
+test adapter_object_1
+Test LookupTable
+Test add
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+Test remove
+成功 精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+成功 電腦網路概論(第二版) 陳雲龍 420
+成功 動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+失敗
+Test find
+失敗
+失敗
+失敗
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格 : 486.571
+Test clean
+失敗
+失敗
+失敗
+壓力測試
+Test add
+Test find
+Test find
+Test remove
+test adapter_class_2
+Test LookupTable
+Test add
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+Test remove
+成功 精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+成功 電腦網路概論(第二版) 陳雲龍 420
+成功 動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+失敗
+Test find
+失敗
+失敗
+失敗
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格 : 486.571
+Test clean
+失敗
+失敗
+失敗
+壓力測試
+Test add
+Test find
+Test find
+Test remove
+test adapter_object_2
+Test LookupTable
+Test add
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+Test remove
+成功 精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+成功 電腦網路概論(第二版) 陳雲龍 420
+成功 動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+失敗
+Test find
+失敗
+失敗
+失敗
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格 : 486.571
+Test clean
+失敗
+失敗
+失敗
+壓力測試
+Test add
+Test find
+Test find
+Test remove
+test adapter_class_3
+Test LookupTable
+Test add
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+Test remove
+成功 精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+成功 電腦網路概論(第二版) 陳雲龍 420
+成功 動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+失敗
+Test find
+失敗
+失敗
+失敗
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格 : 486.571
+Test clean
+失敗
+失敗
+失敗
+壓力測試
+Test add
+Test find
+Test find
+Test remove
+test adapter_object_3
+Test LookupTable
+Test add
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格: 479.7
+Test remove
+成功 精通光學辨識技術:應用ABBYY FineReader 11 OCR 黃敦義 371
+成功 電腦網路概論(第二版) 陳雲龍 420
+成功 動畫圖解資料庫系統理論-使用Access 2010實作(第二版) 李春雄 600
+失敗
+Test find
+失敗
+失敗
+失敗
+最貴的書: 資料庫系統理論-使用SQL Server 2008 李春雄 650
+最便宜的書: 資料庫系統-MTA認證影音教學 李春雄 336
+平均書價格 : 486.571
+Test clean
+失敗
+失敗
+失敗
+壓力測試
+Test add
+Test find
+Test find
+Test remove

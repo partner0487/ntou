@@ -31,7 +31,7 @@ class Lookuptable{
         virtual int add(book) = 0;
         virtual int remove(book) = 0;
         virtual book *find(string BN) = 0;
-        virtual void clean();
+        virtual void clean() = 0;
         virtual book mostExpensive() = 0;
         virtual book cheapest() = 0;
         virtual double average() = 0;

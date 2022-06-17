@@ -28,7 +28,7 @@ int total = 0;
 book Expensive;
 book Expensive2;
 book cheap, cheap2;
-
+/*
 int Lookuptable::add(book a){
     if(table.find(a.getBN()) != table.end()) return 0;
     if(a.getPrice() > Expensive.getPrice())
@@ -52,13 +52,14 @@ int Lookuptable::remove(book a){
 book *Lookuptable::find(string BN){
     if(table.find(BN) == table.end()) return 0;
     return &table[BN];
-}
+}/*
 void Lookuptable::clean(){
     table.clear();
     total = 0;
     book tmp;
     Expensive = tmp;
 }
+/*
 book Lookuptable::cheapest(){
     return cheap;
 }
@@ -67,7 +68,7 @@ book Lookuptable::mostExpensive(){
 }
 double Lookuptable::average(){
     return (double)sum / (double)total;
-}
+}//*/
 
 void adaptee::add(book v, int &result){
     if(MB.find(v.getBN()) != MB.end()) result = 0;

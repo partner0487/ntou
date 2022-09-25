@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Form</title>
+</head>
+
+<head>
+    <meta charset="utf-8">
+    <title>More styles</title>
+    <style type = "text/css">
+        body {font-size: 1.3em; font-family: Perpetua;}
+        p::first-letter {font-size: 1.5em}
+        input {color: blue; font-weight: 600}
+        #othercolor {color: firebrick}
+    </style>
+</head>
+
+<body>
+    <h1>Advanced Web Form</h1>
+    <form method = "post" action = "https://web-form-2022.herokuapp.com/">
+        <p>
+            <label>Your name:
+                <input name = "fullname" type = "text">
+            </label>
+        </p>
+        <p>
+            <label>Your email:
+                <input name = "email" type = "text">
+            </label>
+        </p>
+        <p>
+            <label>Your homepage's URL:
+                <input name = "url" type = "url">
+            </label>
+        </p>
+        <p>
+            <label>Your birthday date:
+                <input name = "date" type = "date">
+            </label>
+        </p>
+        <p>
+            <label>Your favorite color:
+                <input name = "color" type = "color">
+            </label>
+        </p>
+		<p>
+			<label>Your Department:
+                <input name = "department" type = "text" list = "solve" autocomplete = "on">
+                <datalist id = "solve">
+                    <option value = "Department of Aquaculture"></option>
+                    <option value = "Department of Bioscience and Biotechnology"></option>
+                    <option value = "Department of Communications, Navigation and Control Engineering"></option>
+                    <option value = "Department of Computer Science and Engineering"></option>
+                    <option value = "Department of Electrical Engineering"></option>
+                    <option value = "Department of Environmental Biology and Fisheries Science"></option>
+                    <option value = "Department of Food Science"></option>
+                    <option value = "Department of Harbor and River Engineering"></option>
+                    <option value = "Department of Marine Engineering"></option>
+                    <option value = "Department of Marine Environmental Informatics"></option>
+                    <option value = "Department of Mechanical and Mechatronic Engineering"></option>
+                    <option value = "Department of Merchant Marine"></option>
+                    <option value = "Department of Optoelectronics and Materials Technology"></option>
+                    <option value = "Department of Shipping and Transportation Management"></option>
+                    <option value = "Department of Systems Engineering and Naval Architecture"></option>
+                    <option value = "Department of Transportation Science"></option>
+                </select>
+			</label>
+        </p>
+        <p>
+            <strong><em>Check off all of the characteristics that you enjoyed about the college:</em></strong><br />
+        </p>
+        <p>
+            <label><input name = "likes" type = "checkbox" value = "Campus">Campus
+            </label>
+            <label><input name = "likes" type = "checkbox" value = "Students">Students
+            </label>
+            <label><input name = "likes" type = "checkbox" value = "Location">Location
+            </label>
+        </p>
+        <p><strong><em>How did you become interested in
+                    our college?</em></strong><br />
+        </p>
+        <p>
+            <label><input name = "interest" type = "radio" value = "Friends">Friends
+            </label>
+            <label><input name = "interest" type = "radio" value = "Television">Television
+            </label>
+            <label><input name = "interest" type = "radio" value = "Internet">Internet
+            </label>
+        </p>
+        <p>
+            <input type = "submit" value = "Submit" id = "othercolor">
+            <input type = "reset" value = "Clear" id = "othercolor">
+        </p>
+    </form>
+</body>
+
+</html>

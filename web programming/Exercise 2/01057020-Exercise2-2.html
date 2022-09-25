@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type = "text/css">
+        .ntou {position: relative}
+        .back {z-index: 1;}
+        .top {position: absolute; left: 50%; top: 2%; height: 100px; width: 100px; z-index: 2;}
+        h1 {font-family: Arial, Helvetica, sans-serif; color: white; position: absolute; top: 0%; left: 1%}
+        h3 {font-family: Arial, Helvetica, sans-serif; color: white; position: absolute; top: 10%; left: 1%}
+        a { text-decoration: none; color: white; font-family: Arial, Helvetica, sans-serif;}
+        
+        .link1 {position: relative; top: 4px; height: 20px; z-index: 2}
+        .link2 {position: relative; top: 4px; height: 20px; width: 20px; z-index: 2}
+        .link3 {position: relative; top: 4px; height: 20px; width: 20px; z-index: 2}
+        .Google {position: absolute; left: 1%; top: 20%; height: 25px; z-index: 2}
+        .FB {position: absolute; left: 1%; top: 25%; height: 25px; z-index: 2}
+        .YT {position: absolute; left: 1%; top: 30%; height: 25px; z-index: 2}
+
+        a:hover{
+            background-color: lightblue;
+            color: navy;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <figure class = "ntou">
+        <img src = "ntou.jpg" class = "back">
+        <img src = "ntou_logo.png" class = "top">
+        <h1>Here are my favorite sites</h1>
+        <h3>Click on a name to go to the the website</h3>
+        <a href="https://www.google.com" class = "Google"><img src = "link.png" class = "link1"> Google</a>
+        <a href="https://www.facebook.com" class = "FB"><img src = "link.png" class = "link2"> Facebook</a>
+        <a href="https://www.youtube.com/" class = "YT"><img src = "link.png" class = "link3"> Youtube</a>
+    </figure>
+</body>
+</html>

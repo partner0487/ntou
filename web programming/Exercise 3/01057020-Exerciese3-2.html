@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style type = "text/css">
+        body {
+            font-family: Perpetua;
+            box-sizing: border-box;
+        }
+        h1 {text-align: center; color: royalblue}
+        
+        .Menu{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav  {
+            box-sizing: border-box;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            width: calc(100% / 6);
+            background-color: RoyalBlue; 
+        }
+        nav ul {
+            position: absolute;
+            width: 100%;
+            display: none;
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0; 
+        }
+        nav:hover ul {
+            position: absolute;
+            display: block; 
+        }
+        nav ul li {
+            position: relative;
+            width: calc(100% / 6);
+            border-top: 2px solid RoyalBlue;
+            background-color: white;
+            color: black; 
+        }
+        nav ul li:hover { background-color: PowderBlue; }
+        a               { text-decoration: none; }
+
+        @media screen and (max-width: 600px){
+            nav{
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                width: 100%;
+                background-color: RoyalBlue; 
+            }
+            nav:hover ul {
+                position: relative;
+                display: block; 
+            }
+            nav ul li {
+                position: relative;
+                width: 100%;
+                border-top: 2px solid RoyalBlue;
+                background-color: white;
+                color: black; 
+            }
+        }
+   </style>
+</head>
+<body>
+    <h1>Web Intelligence</h1>
+    <div class = "Menu">
+        <nav>
+            JavaScript
+            <ul>
+                <li><a href="https://www.w3schools.com/js/default.asp" target ="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript" target ="_blank">MDN</a></li>
+                <li><a href="https://www.json.org/json-en.html" target ="_blank">JSON</a></li>
+            </ul>
+        </nav>
+        <nav>
+            jQuery 
+            <ul>
+                <li><a href="https://jquery.com/" target ="_blank">jQuery.org</a></li>
+                <li><a href="https://jqueryui.com/" target ="_blank">jQuery UI</a></li>
+                <li><a href="https://www.w3schools.com/jquERy/default.asp" target ="_blank">jQuery Tutorial</a></li>
+            </ul>
+        </nav>
+        <nav>
+            node.js
+            <ul>
+                <li><a href="https://www.w3schools.com/nodejs/" target ="_blank">Node.js Tutorial</a></li>
+            </ul>
+        </nav>
+        <nav>PHP</nav>
+        <nav>ASP.Net</nav>
+        <nav>Servlet/JSP</nav>
+    </div>
+
+    <iframe src="01057020-Exercise3-1.html" width = "100%" height = "550px"></iframe>
+
+</body>
+</html>

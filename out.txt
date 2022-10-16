@@ -1,71 +1,45 @@
-Number of Discs: 6
-***********************************
-Initial State:
-A: 6 5 4 3 2 1
-B:
-C:
-***********************************
-After Moved 5 Times:
-A: 6 5 4 1
-B: 3
-C: 2
-***********************************
-After Moved 10 Times:
-A: 6 5 2
-B: 3
-C: 4 1
-***********************************
-After Moved 15 Times:
-A: 6 5
-B:
-C: 4 3 2 1
-***********************************
-After Moved 20 Times:
-A: 6 3
-B: 5 2 1
-C: 4
-***********************************
-After Moved 25 Times:
-A: 6 3 2
-B: 5 4 1
-C:
-***********************************
-After Moved 30 Times:
-A: 6 1
-B: 5 4 3 2
-C:
-***********************************
-After Moved 35 Times:
-A: 2 1
-B: 5 4 3
-C: 6
-***********************************
-After Moved 40 Times:
-A: 4
-B: 5
-C: 6 3 2 1
-***********************************
-After Moved 45 Times:
-A: 4 3
-B: 5 2
-C: 6 1
-***********************************
-After Moved 50 Times:
-A: 4 3
-B: 1
-C: 6 5 2
-***********************************
-After Moved 55 Times:
-A: 4
-B: 3 2 1
-C: 6 5
-***********************************
-After Moved 60 Times:
-A: 2 1
-B:
-C: 6 5 4 3
-***********************************
-Total Moved 63 Times:
-A:
-B:
-C: 6 5 4 3 2 1
+Homework
+assignment
+is
+due
+in
+the
+beginning
+of
+class
+assignment
+is
+accepted
+but
+penalty
+is
+applied
+for
+each
+day
+the
+assignment
+is
+late
+unless
+approved
+in
+advance
+prefix of Ho:
+Homework
+suffix of ed:
+accepted
+applied
+approved
+character frequency over 6:
+a,13
+d,6
+e,17
+i,12
+n,14
+p,6
+s,14
+t,9
+word frequency over 3:
+assignment,3
+is,4

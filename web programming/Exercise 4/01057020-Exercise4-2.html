@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <script type = "text/javascript">
+        var se;
+        se = window.prompt("Please input the Pokemon you like\br(1=pikachu, 2=bulbasaur, 3=charmander, 4=squirtle, 5=random");
+
+        var num;
+        num = window.prompt("Please input the side length(>=1 and <= 10");
+
+        var imgs = ['pikachu', 'bulbasaur', 'charmander', 'squirtle'];
+        
+        if(se > 5 || se < 1 || (num < 1 || num > 10)){
+            window.alert("Wrong input!Please press [F5] to reload the page!");
+        }
+        else if(se == 1){
+            for(var i = 1; i <= num; i++){
+                for(var j = 1; j <= num; j++){
+                    document.write("<img src='pikachu.png'>");
+                }
+                document.write("</br>");
+            }
+        }
+        else if(se == 2){
+            for(var i = 1; i <= num; i++){
+                for(var j = 1; j <= num; j++){
+                    document.write("<img src='bulbasaur.png'>");
+                }
+                document.write("</br>");
+            }
+        }
+        else if(se == 3){
+            for(var i = 1; i <= num; i++){
+                for(var j = 1; j <= num; j++){
+                    document.write("<img src='charmander.png'>");
+                }
+                document.write("</br>");
+            }
+        }
+        else if(se == 4){
+            for(var i = 1; i <= num; i++){
+                for(var j = 1; j <= num; j++){
+                    document.write("<img src='squirtle.png'>");
+                }
+                document.write("</br>");
+            }
+        }
+        else if(se == 5){
+            for(var i = 1; i <= num; i++){
+                for(var j = 1; j <= num; j++){
+                    var idx = Math.floor(Math.random() * 4);
+                    document.write("<img src='" + imgs[idx] + ".png'>");
+                }
+                document.write("</br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class = "image"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type = "text/css">
+        div {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .NAME {
+            color: Firebrick;
+            font-weight: bolder;
+        }
+        .age {
+            color: Navy;
+            text-decoration: underline;
+        }
+    </style>
+    <script type = "text/javascript">
+        var name;
+        var now = new Date();
+        var year = now.getFullYear();
+        var birthyear;
+        var numny;
+        
+        document.writeln("<div>");
+        name = window.prompt("Please input your name:");
+        document.writeln("<h1>Hello, <span class = NAME>" + name + "</span>!</h1>");
+        
+        birthyear = parseInt(window.prompt("Please input your birth year:"));
+        //*
+        if((year - birthyear) <= 0){
+            window.confirm("Your input is incorrect!");
+            document.writeln("<h1>Your age is a mystery!</h1>");
+        }
+        else{
+            if((year - birthyear) == 1)
+                document.writeln("<h1>Your age is one year old!</h1>");
+            else
+                document.writeln("<h1>Your age is <span class = age>" + (year - birthyear) + "</span> years old!</h1>");
+        }//*/
+        document.writeln("</div>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

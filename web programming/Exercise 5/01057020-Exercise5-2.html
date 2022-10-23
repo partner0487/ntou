@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <span>Side Length(<=10):</span>
+    <input type="text" value="5" id="num"></span>
+    <button type="button" id="triangle" onclick="triangle()">Draw Baseball Triangle</button>
+    <button type="button" id="Square" onclick="Square()">Draw Baseball Square</button>
+    <button type="button" id="Special" onclick="Special()">Draw Special Square</button>
+    <hr>
+
+    <div class="all">
+        <div id="imgs"></div>
+    </div>
+
+    <script type="text/javascript">
+        var num = document.getElementById("num");
+        var img1 = document.getElementById("imgs");
+
+        function check(){
+            if((num.value < 0 || num.value > 10) || isNaN(num.value)){
+                window.alert("invalid value, the value will be set as the default value 5");
+                num.value = 5;
+            }
+        }
+        function triangle(){
+            check();
+            for(var i = 0; i < num.value; i++){
+                for(var j = 0; j < num.value - i - 1; j++)
+                    img1.innerHTML = img1.innerHTML + "<img src='blank.png' class='img'> ";
+                for(var j = 0; j < i + 1; j++)
+                    img1.innerHTML = img1.innerHTML + "<img src='baseball.jpg' class='img'> "  
+                img1.innerHTML = img1.innerHTML + "</br>";
+            }
+        }
+        function Square(){
+            check();
+            for(var i = 0; i < num.value; i++){
+                for(var j = 0; j < num.value; j++)
+                    img1.innerHTML = img1.innerHTML + "<img src='baseball.jpg' class='img'>";
+                img1.innerHTML = img1.innerHTML + "</br>";
+            }
+        }
+        function Special(){
+            check();
+            var arr = ["<img src='baseball.jpg' class='img'>", 
+                        "<img src='baseball-x.jpg', class='img'>"];
+            var idx;
+            for(var i = 0; i < num.value; i++){
+                for(var j = 0; j < num.value; j++){
+                    idx = Math.floor(Math.random() * 2);
+                    img1.innerHTML = img1.innerHTML + arr[idx];
+                }
+                img1.innerHTML = img1.innerHTML + "</br>";
+            }
+        }
+    </script>
+</body>
+</html>

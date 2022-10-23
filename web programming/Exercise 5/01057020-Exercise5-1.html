@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic DOM</title>
+    <style type="text/CSS">
+        @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+        h1 {
+            font-family: 'cwTeXYen'; 
+			font-size: 50px;			
+		}
+        .all{
+            display: flex;
+            flex-wrap: wrap;
+        }
+		div div{            
+            padding: 5px;
+            text-align: center;
+			font-family: Consolas;
+            font-size: 80px;			
+			margin: 5px;			
+		}
+
+        div.number {
+            color: dodgerblue;
+			border: 1px solid gray;			
+            min-width: 100px;
+		}
+
+	</style>    
+</head>
+
+<body>
+    <h1>四則運算結果:</h1>
+    <div class="all">
+        <div class="number" id="num1">Number1</div>
+        <div id="op">?</div>
+        <div class="number" id="num2">Number2</div>
+        <div>=</div>
+        <div class="number" id="result">Result</div>   
+    </div>
+
+    <script type="text/javascript">
+        var op;
+        var first, second;
+        op =  window.prompt("請輸入算數運算子：1 代表加(+)、2 代表減(-)、3 代表乘(*)、4 代表除(/)");
+        if(!(op <= 4 && op >= 1)){
+            window.confirm("輸入有誤！選項自動設為1");
+            op = 1;
+        }
+        first = parseInt(window.prompt("請輸入第一個數字:"));
+        if(!(isFinite(first))){
+            window.confirm("輸入有誤！數值自動設定為1");
+            first = 1;
+        }
+        second = parseInt(window.prompt("請輸入第二個數字"));
+        if(!(isFinite(second))){
+            window.confirm("輸入有誤！數值自動設定為1");
+            second = 1;
+        }
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        const result = document.getElementById("result");
+        const opp = document.getElementById("op");
+        num1.innerHTML = first;
+        num2.innerHTML = second;
+        if(op == 1){
+            opp.innerHTML = "+";
+            result.innerHTML = (first + second);
+        }
+        else if(op == 2){
+            opp.innerHTML = "-";
+            result.innerHTML = first - second;
+        }
+        else if(op == 3){
+            opp.innerHTML = "*";
+            result.innerHTML = first * second;
+        }
+        else if(op == 4){
+            opp.innerHTML = "/";
+            result.innerHTML = (first / second).toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

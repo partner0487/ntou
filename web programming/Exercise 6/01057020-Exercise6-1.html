@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Function</title>
+    <style type="text/css">
+        li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        ol {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        img.dice {
+            width: 100px;
+            height: 100px;
+        }
+
+        img.congrats {
+            width: 440px;
+        }
+
+        #msg {
+            font-family: Helvetica, "Microsoft YaHei", "LiHei Pro", TW-Kai;
+            font-size: 120%;
+            color: navy;
+        }
+        #m18{
+            font-family: Helvetica, "Microsoft YaHei", "LiHei Pro", TW-Kai;
+            font-size: 120%;
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <input id="rollButton" type="button" value="Roll Dice" onclick="roll()">
+        <input id="cheatButton" type="button" value="Shortcut" onclick="short()">
+        <input id="cheatButton2" type="button" value="Shortcut2" onclick="short2()">
+    </form>
+    <ol>
+        <li><img id="dice1" class="dice" src="blank.jpg" alt="blank image"></li>
+        <li><img id="dice2" class="dice" src="blank.jpg" alt="blank image"></li>
+        <li><img id="dice3" class="dice" src="blank.jpg" alt="blank image"></li>
+        <li><img id="dice4" class="dice" src="blank.jpg" alt="blank image"></li>
+    </ol>
+    <div id="m18"></div>
+    <div id="congrats"></div>
+    <div id="msg"></div>
+
+    <script text="text/javascript">
+        var dices = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"],
+            dice1 = document.getElementById("dice1"),
+            dice2 = document.getElementById("dice2"),
+            dice3 = document.getElementById("dice3"),
+            dice4 = document.getElementById("dice4");
+
+        var msg = document.getElementById("msg"),
+            m18 = document.getElementById("m18"),
+            con = document.getElementById("congrats");
+
+        function roll(){
+            m18.innerHTML = "", con.innerHTML = "", msg.innerHTML = "";
+            var idx1 = Math.floor(Math.random() * 6),
+                idx2 = Math.floor(Math.random() * 6),
+                idx3 = Math.floor(Math.random() * 6),
+                idx4 = Math.floor(Math.random() * 6);
+
+            var cnt = [0, 0, 0, 0, 0, 0];
+            cnt[idx1]++, cnt[idx2]++, cnt[idx3]++, cnt[idx4]++;
+
+            dice1.src = dices[idx1] + ".jpg";
+            dice2.src = dices[idx2] + ".jpg";
+            dice3.src = dices[idx3] + ".jpg";
+            dice4.src = dices[idx4] + ".jpg";
+
+            if(cnt[idx1] == 4){
+                m18.innerHTML = "Congratulations! Your roll is '一色'";
+                con.innerHTML = "<img src='congrats.png' class='congrats'>";
+            }
+            else if(cnt[idx1] == 3 || cnt[idx2] == 3 || cnt[idx3] == 3 || cnt[idx4] == 3)
+                msg.innerHTML = "No decision, please re-roll the dice!";
+            else if(cnt[idx1] == 1 && cnt[idx2] == 1 && cnt[idx3] == 1 && cnt[idx4] == 1)
+                msg.innerHTML = "Oops! Your roll is '無面'";
+            else{
+                var sc;
+                if(idx1 == idx2){
+                    if(idx3 == idx4 && idx3 < idx1) sc = idx1 + idx2;
+                    else sc = idx3 + idx4;
+                }
+                else if(idx1 == idx3){
+                    if(idx2 == idx4 && idx2 < idx1) sc = idx1 + idx3;
+                    else sc = idx2 + idx4;
+                }
+                else if(idx1 == idx4){
+                    if(idx2 == idx3 && idx2 < idx1) sc = idx1 + idx4;
+                    else sc = idx2 + idx3;
+                }
+                else if(idx2 == idx3){
+                    if(idx1 == idx4 && idx1 < idx2) sc = idx2 + idx3;
+                    else sc = idx1 + idx4;
+                }
+                else if(idx2 == idx4){
+                    if(idx1 == idx3 && idx1 < idx2) sc = idx2 + idx4;
+                    else sc = idx1 + idx3;
+                }
+                else if(idx3 == idx4){
+                    if(idx1 == idx2 && idx1 < idx3) sc = idx3 + idx4;
+                    else sc = idx1 + idx2;
+                }
+                sc += 2;
+                if(sc == 12){
+                    m18.innerHTML = "Congratulations! Your roll is '十八'!";
+                    con.innerHTML = "<img src='congrats.png' class='congrats'>";
+                }
+                msg.innerHTML = "Your score is " + sc + " !";
+            }
+        }
+        function short(){
+            m18.innerHTML = "", con.innerHTML = "", msg.innerHTML = "";
+            var idx = Math.floor(Math.random() * 6);
+            dice1.src = dice2.src = dice3.src = dice4.src = dices[idx] + ".jpg";
+
+            m18.innerHTML = "Congratulations! Your roll is '一色'";
+            con.innerHTML = "<img src='congrats.png' class='congrats'>";
+        }
+        function short2(){
+            m18.innerHTML = "", con.innerHTML = "", msg.innerHTML = "";
+
+            var choose = [dice1, dice2, dice3, dice4];
+
+            var n1 = choose[Math.floor(Math.random() * 4)],
+                n2 = choose[Math.floor(Math.random() * 4)];
+            while(n2 == n1)
+                n2 = choose[Math.floor(Math.random() * 4)];
+            n1.src = n2.src = dices[5] + ".jpg";
+
+            var n3, n4;
+            for(var i = 0; i < 4; i++)
+                if(choose[i] != n1 && choose[i] != n2){
+                    n3 = choose[i];
+                    break;
+                }
+            for(var i = 0; i < 4; i++)
+                if(choose[i] != n1 && choose[i] != n2 && choose[i] != n3){
+                    n4 = choose[i];
+                    break;
+                }
+            var dicesex6 = ["dice1", "dice2", "dice3", "dice4", "dice5"];
+            n3.src = n4.src = dicesex6[Math.floor(Math.random() * 5)] + ".jpg";
+
+            m18.innerHTML = "Congratulations! Your roll is '十八'!";
+            con.innerHTML = "<img src='congrats.png' class='congrats'>";
+            msg.innerHTML = "Your score is 12 !";
+        }
+    </script>
+</body>
+
+</html>

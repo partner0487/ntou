@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+        .all {
+            font-family: "cwTeXKai", serif;
+            text-align: center;
+        }
+        .failed {
+            color: dimgray;
+        }
+        .rand1 {
+            color: navy;
+        }
+        .rand2 {
+            color: firebrick;
+            font-size: 150%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="all">
+        <h1>
+            <div class="failed">專案失敗了，是因為...</div>
+        </h1>
+        <h1>
+            <span class="rand1" id="rand1"></span>
+            <span class="rand2" id="rand2"></span>
+        </h1>
+        <div class="img" id="img"></div>
+        <span id="test"></span>
+    </div>
+    
+
+    <script type="text/javascript">
+        var adj = ["客戶那邊的",  "我們的",  "負責談需求的",  "負責這個部分的",  "直到上線前一天", "(雙手一攤)"];
+        var n = ["專案經理", "主管", "工程師", "設計師", "外包", "User", "聯絡窗口"];
+        var v = ["當初沒有講清楚", "一直換", "說他肚子不舒服", "擺爛不想做了", "突然開始放長假",  "去生小孩了",  "離職了",  "都沒甚麼sense",  "都沒有跟我講",  "以為這些不用做",  "一直在狀況外",  "做事拖拖拉拉",  "還搞不清楚狀況",  "Quality 有問題",  "東西一直改", "在整我", "突然就沒來了" ];
+
+        var AdjN = document.getElementById("rand1");
+        var idx1 = Math.floor(Math.random() * 6), idx2 = Math.floor(Math.random() * 7);
+        AdjN.innerHTML = adj[idx1] + n[idx2];
+
+        var V = document.getElementById("rand2");
+        V.innerHTML = v[Math.floor(Math.random() * 17)] + "!";
+
+        var img = ["Cat.jpg", "Harry.jpg", "Jacky.jpg", "Yao.jpg"];
+        var Img = document.getElementById("img");
+        Img.innerHTML = "<img src='" + img[Math.floor(Math.random() * 4)] + "'onclick = 'location.reload()'>";
+
+    </script>
+
+</body>
+</html>

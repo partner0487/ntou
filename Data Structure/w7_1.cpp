@@ -69,7 +69,6 @@ int main(){
             else
                 cout << (q.size() ? " " : "");
         }
-        // cout << "E";
         cout << '\n';  
     }
 }

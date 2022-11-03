@@ -3,53 +3,48 @@
 using namespace std;
 
 void Post(string s){
-    stack<int> st;
+    stack<string> st;
     for(int i = 0; i < s.length(); i++){
+        string t = s.substr(i, 1);
         if(s[i] >= '0' && s[i] <= '9')
-            st.push(s[i] - '0');
+            st.push(t);
         else{
-            int a = st.top();
+            string a = st.top();
             st.pop();
-            if(!st.empty()){
-                int b = st.top();
-                st.pop();
-                cout << "(" << b << s[i] << a << ")";
-            }
-            else{
-                cout << s[i] << a;
-            }
-            /*
-            if(s[i] == '+') st.push(b + a);
-            else if(s[i] == '-') st.push(b - a);
-            else if(s[i] == '*') st.push(b * a);
-            else if(s[i] == '/') st.push(b / a);
-            else if(s[i] == '%') st.push(b % a);//*/
+            string b = st.top();
+            st.pop();
+            string now;
+            if(i != s.length() - 1)
+                now = "(" + b + s[i] + a + ")";
+            else now = b + s[i] + a;
+            st.push(now);
         }
+    }
+    while(!st.empty()){
+        cout << st.top();
+        st.pop();
     }
 }
 void Pre(string s){
-    stack<int> st;
+    stack<string> st;
     for(int i = s.length() - 1; i >= 0; i--){
-        if(s[i] >= '0' && s[i] <= '9')
-            st.push(s[i] - '0');
+        string t = s.substr(i, 1);
+        if(s[i] >= '0' && s[i] <= '9') st.push(t);
         else{
-            int a = st.top();
+            string a = st.top();
             st.pop();
-            if(!st.empty()){
-                int b = st.top();
-                st.pop();
-                cout << "(" << a << s[i] << b << ")";
-            }
-            else{
-                cout << s[i] << a;
-            }
-            /*
-            if(s[i] == '+') st.push(b + a);
-            else if(s[i] == '-') st.push(b - a);
-            else if(s[i] == '*') st.push(b * a);
-            else if(s[i] == '/') st.push(b / a);
-            else if(s[i] == '%') st.push(b % a);//*/
+            string b = st.top();
+            st.pop();
+            string now;
+            if(i == 0) 
+                now = a + s[i] + b;
+            else now = "(" + a + s[i] + b + ")";
+            st.push(now);
         }
+    }
+    while(!st.empty()){
+        cout << st.top();
+        st.pop();
     }
 }
 

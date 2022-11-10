@@ -1,45 +1,9 @@
-Homework
-assignment
-is
-due
-in
-the
-beginning
-of
-class
-assignment
-is
-accepted
-but
-penalty
-is
-applied
-for
-each
-day
-the
-assignment
-is
-late
-unless
-approved
-in
-advance
-prefix of Ho:
-Homework
-suffix of ed:
-accepted
-applied
-approved
-character frequency over 6:
-a,13
-d,6
-e,17
-i,12
-n,14
-p,6
-s,14
-t,9
-word frequency over 3:
-assignment,3
-is,4
+Created Linked list is:  63 
+Created Linked list is:  63  25 
+Created Linked list is:  63  25  42 
+
+Created Linked list is:  69 
+Created Linked list is:  69  32 
+Created Linked list is:  11  69  32 
+Created Linked list is:  8  11  69  32 
+Created Linked list is:  8  11  55  69  32 

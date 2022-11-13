@@ -11,7 +11,7 @@ struct node{
 node *root = new node;
 int last = 0;
 
-void insert(int n, int pos, node *root){
+void insert(int n, int pos, node *&root){
     node *tmp;
     node *New = new node;
     New->num = n;

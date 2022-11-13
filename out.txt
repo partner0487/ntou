@@ -1,9 +1,52 @@
-Created Linked list is:  63 
-Created Linked list is:  63  25 
-Created Linked list is:  63  25  42 
-
-Created Linked list is:  69 
-Created Linked list is:  69  32 
-Created Linked list is:  11  69  32 
-Created Linked list is:  8  11  69  32 
-Created Linked list is:  8  11  55  69  32 
+65
+12
+0
+1
+1
+1
+0
+1
+0
+0
+0
+1
+1
+1
+0
+1
+1
+0
+0
+1
+1
+0
+1
+1
+0
+1
+1
+0
+1
+1
+0
+1
+0
+0
+1
+0
+0
+0
+1
+0
+0
+1
+0
+1
+0
+0
+0
+1
+1
+1
+1
+1

@@ -51,31 +51,56 @@
         // 如果token是數字或長度<=2，或是stop word (stopWords的元素)，就過濾掉。
         function filterTokens(uniqueTokens) {
             // TODO
+            const filteredTokens = [];
+            for(var i = 0; i < uniqueTokens.length; i++){
+                if(!(isNaN(uniqueTokens[i])) || uniqueTokens[i].length <= 2 || stopWords.includes(uniqueTokens[i])) 
+                    continue;
+                filteredTokens.push(uniqueTokens[i]);
+            }
             return filteredTokens;
         }
 
         // 只留存出現次數大於2的token，並加上出現次數，例如：olympic (20)
+        //*
         function produceKeywordsWithCount(filteredTokens, originalTokens) {
             // TODO
+            const sortedResults = [];
+            for(var i = 0; i < filteredTokens.length; i++){
+                var cnt = 0;
+                for(var j = 0; j < originalTokens.length; j++){
+                    if(filteredTokens[i] == originalTokens[j]) cnt++;
+                }
+                if(cnt > 2){
+                    const now = [filteredTokens[i], cnt];
+                    sortedResults.push(now);
+                }
+            }
+            sortedResults.sort(function(a, b){
+                return b[1] - a[1];
+            })
+            // console.log(sortedResults);
             return sortedResults;
-        }
+        }//*/
 
         function generateKeywords() {
             let text = document.getElementById("inputText").value;
             // 根據re去切token
             let tokens = text.toLowerCase().split(re);
-
             let uniqueTokens = convertToUniqueTokens(tokens);
             let filteredTokens = filterTokens(uniqueTokens);
+            //*
             let sortedResults = produceKeywordsWithCount(filteredTokens, tokens);
-
+            // console.log(sortedResults);
             if (sortedResults.length != 0) {
-
+                var res = "";
+                for(var i = 0; i < sortedResults.length; i++){
+                    res += sortedResults[i][0] + " (" + sortedResults[i][1] + ")</br><hr>" 
+                }
                 // 將所有關鍵字以<br><hr>串接起來，並顯示div中。
-                
+                document.getElementById("display").innerHTML = res;
             } else {
                 window.alert("No keywords extracted!");
-            }
+            }//*/
         }
     </script>
 </body>

@@ -33,24 +33,76 @@
     </style>
     <script type="text/javascript">
         // TODO
+        function printBook(a){
+            console.log(a);
+            var now = "<tr class='oddrow'>" + 
+                "<td>" + a.title + "</td>" +
+                "<td>" + a.author + "</td>" +
+                "<td>" + a.year + "</td>"+
+                "<td><a href='" + a.url + "'>" + a.url + "</td></tr>";
+            document.getElementById("content").innerHTML += now;
+        }
+        function insert(){
+            const book = new Object();
+            book.title = document.getElementById("title").value;
+            book.author = document.getElementById("author").value;
+            book.year = document.getElementById("year").value;
+            book.url = document.getElementById("url").value;
+
+            var key = "ntou-" + Date.now();
+            if(key.startsWith("ntou-")){
+                localStorage.setItem(key, JSON.stringify(book));
+                printBook(book);
+            }
+        }
+        function remove(){
+            localStorage.clear();
+            document.getElementById("content").innerHTML = "";
+            window.alert("All items were removed!");
+        }
+        function solve(){
+            for(var i = 0; i < localStorage.length; i++){
+                console.log(localStorage.key(i));
+                const a = JSON.parse(localStorage.getItem(localStorage.key(i)));
+                printBook(a);
+            }
+        }
+        window.addEventListener("load", solve, "false");
     </script>
 </head>
 
 <body>
     <form action="#">
         <p>
-            <label>Book Title:</label>
-            <label>Author(s):</label>
-            <label>Year:</label>
-            <label>Book URL:</label>
+            <label>Book Title:
+                <input name = "fullname" type = "text" id="title">
+            </label>
+            <label>Author(s):
+                <input name = "fullname" type = "text" id="author">
+            </label>
+            <label>Year:
+                <input name = "fullname" type = "text" id="year">
+            </label>
+            <label>Book URL:
+                <input name = "fullname" type = "url" id="url">
+            </label>
         </p>
         <p>
-            <input type="button" value="Add New Item" id="addButton">
-            <input type="button" value="Remove All Items" id="removeAllButton">
+            <input type="button" value="Add New Item" id="addButton" onclick="insert()">
+            <input type="button" value="Remove All Items" id="removeAllButton" onclick="remove()">
         </p>
     </form>
     <hr>
     <div id="display">
+        <table>
+            <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>URL</th>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
     </div>
 </body>
 

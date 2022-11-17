@@ -2,12 +2,13 @@
 #include "queue"
 #include "utility"
 #include "string"
+#include "iomanip"
 using namespace std;
 
 struct node{
     string c;
-    int v, w;
-    node(string &_c, int &_v, int &_w){
+    float v, w;
+    node(string &_c, float &_v, float &_w){
         c = _c, v = _v, w = _w;
     }
 };
@@ -23,21 +24,39 @@ int main(){
     priority_queue<node, vector<node>, cmp> pq;
 
     string c;
-    int v, w;
-    int totalw = 0, totalv = 0;
+    float v, w;
+    float totalw = 0;
+    int totalv = 0;
     while(cin >> c){
         if(c == "-1") break;
         cin >> v >> w;
         node now = node(c, v, w);
-        totalw += w, totalv += v;
-        if(totalw > 20){
-            totalw -= pq.top().w;
-            totalv -= pq.top().v;
-            pq.pop();
+        if(totalw + w <= 20){
+            totalw += w;
+            totalv += v;
             pq.push(now);
         }
-        else pq.push(now);
-        cout << pq.top().c << " " << pq.top().v << " " << pq.top().w << endl;
+        else{
+            while(pq.top().v / pq.top().w < now.v / now.w || totalw + now.w <= 20){
+                if(totalw + now.w <= 20){
+                    totalw += w;
+                    totalv += v;
+                    pq.push(now);
+                }
+                else if(pq.top().v / pq.top().w < now.v / now.w){
+                    totalw -= pq.top().w;
+                    totalv -= pq.top().v;
+                    pq.pop();
+                }
+            }
+        }
     }
-    cout << totalv << " " << totalw << endl;
+    while(!pq.empty()){
+        cout << pq.top().c;
+        pq.pop();
+        cout << (pq.empty() ? "" : " ");
+    }
+    cout << endl;
+    cout << "total weight:" << setprecision(2) << fixed << totalw << endl;
+    cout << "total value:" << totalv << endl;
 }

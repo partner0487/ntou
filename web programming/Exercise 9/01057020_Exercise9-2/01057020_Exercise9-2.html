@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval_practice</title>
+    <style type="text/css">
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="img"></div>
+    <script>
+        var RUN = setInterval(function(){solve()}, 2000);
+        var imgs = ["apple.png", "facebook.png", "google.png", "ibm.png", "microsoft.png", "yahoo.png"];
+        function solve(){
+            var appleX = Math.floor(Math.random() * 300) + 100,
+            appleY = Math.floor(Math.random() * 300) + 100,
+            appleZ = Math.floor(Math.random() * 10000) % 6 + 1;
+            facebookX = Math.floor(Math.random() * 300) + 100,
+            facebookY = Math.floor(Math.random() * 300) + 100,
+            facebookZ = Math.floor(Math.random() * 10000) % 6 + 1;
+            googleX = Math.floor(Math.random() * 300) + 100,
+            googleY = Math.floor(Math.random() * 300) + 100,
+            googleZ = Math.floor(Math.random() * 10000) % 6 + 1;
+            ibmX = Math.floor(Math.random() * 300) + 100,
+            ibmY = Math.floor(Math.random() * 300) + 100,
+            ibmZ = Math.floor(Math.random() * 10000) % 6 + 1;
+            microsoftX = Math.floor(Math.random() * 300) + 100,
+            microsoftY = Math.floor(Math.random() * 300) + 100;
+            microsoftZ = Math.floor(Math.random() * 10000) % 6 + 1;
+            yahooX = Math.floor(Math.random() * 300) + 100,
+            yahooY = Math.floor(Math.random() * 300) + 100;
+            yahooZ = Math.floor(Math.random() * 10000) % 6 + 1;
+            var apple = "<img style='top: " + appleY + "px; left: " + appleX + "px; z-index: " + appleZ + ";' src='" + imgs[0] + "'>";
+            var facebook = "<img style='top: " + facebookY + "px; left: " + facebookX + "px; z-index: " + facebookZ + ";' src='" + imgs[1] + "'>";
+            var google = "<img style='top: " + googleY + "px; left: " + googleX + "px; z-index: " + googleZ + ";' src='" + imgs[2] + "'>";
+            var ibm = "<img style='top: " + ibmY + "px; left: " + ibmX + "px; z-index: " + ibmZ + ";' src='" + imgs[3] + "'>";
+            var microsoft = "<img style='top: " + microsoftY + "px; left: " + microsoftX + "px; z-index: " + microsoftZ + ";' src='" + imgs[4] + "'>";
+            var yahoo = "<img style='top: " + yahooY + "px; left: " + yahooX + "px; z-index: " + yahooZ + ";' src='" + imgs[5] + "'>";
+            document.getElementById("img").innerHTML = apple + facebook + google + ibm + microsoft + yahoo;
+        }
+        solve();
+    </script>
+</body>
+</html>

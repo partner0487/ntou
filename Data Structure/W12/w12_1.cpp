@@ -43,19 +43,18 @@ int main(){
         freopen("out.txt", "w", stdout);
     #endif
     string BT;
-    while(getline(cin, BT) && BT != "0"){
+    while(getline(cin, BT) && BT[0] != '0'){
         string node[3];
         int cnt = 0;
         int st = 0;
         for(int i = 0; i < BT.length(); i++){
             if(BT[i] == ' ' || i == BT.length() - 1){
-                if(i == BT.length() - 1) 
-                    node[cnt++] = BT.substr(st, i - st + 1);
-                else 
-                    node[cnt++] = BT.substr(st, i - st);
-                st = i + 1;   
+                node[cnt++] = BT.substr(st, i - st);
+                st = i + 1;   // 有空再寫linkedList
             }
         }
+        // cout << endl;
+        // cout << node[0] << " " << node[1] << " " << node[2] << endl;
         if(!(W.count(node[0]))){
             W[node[0]] = 1;
             V[W[node[0]]] = node[0];

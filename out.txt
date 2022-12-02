@@ -1,18 +1,4 @@
-Happy, 1
-birthday, 1
-NTOU, 2
-I, 1
-love, 1
-Happy, 1
-birthday, 1
-NTOU, 2
-Christmas, 1
-I, 1
-love, 2
-Happy, 1
-birthday, 1
-NTOU, 3
-Christmas, 1
-I, 1
-love, 2
-CSIE, 1
+Preorder: r n11 n21 n31 n32 n22 n33 n45 n46 n12 n23 
+Inorder: n31 n21 n32 n11 n45 n33 n46 n22 r n23 n12 
+Postorder: n31 n32 n21 n45 n46 n33 n22 n11 n23 n12 r 
+The balance factor is 2

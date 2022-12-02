@@ -1,20 +1,7 @@
-Happy birthday NTOU
-I love NTOU
-#Finish
-#Print
-#Insert
-10
-Taipei
-#Insert
-3
-Christmas
-#Insert
-2
-Love
-#Print
-#Add
-ntou
-#Add
-CSIE
-#Print
-#Exit
+r n11 n12
+n11 n21 n22
+n12 n23
+n21 n31 n32
+n22 n33
+n33 n45 n46
+0

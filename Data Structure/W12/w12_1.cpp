@@ -53,8 +53,6 @@ int main(){
                 st = i + 1;   // 有空再寫linkedList
             }
         }
-        // cout << endl;
-        // cout << node[0] << " " << node[1] << " " << node[2] << endl;
         if(!(W.count(node[0]))){
             W[node[0]] = 1;
             V[W[node[0]]] = node[0];
